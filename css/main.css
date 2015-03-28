@@ -1,5 +1,5 @@
-body {
-	background-color: #757575;
+html {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .serif {
@@ -23,8 +23,22 @@ header div {
 }
 
 header h2 {
-	font-size: 22px;
+	font-size: 20px;
+	font-weight: normal;
+	color: grey;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	float: left;
+	letter-spacing: 1px;
+}
+
+header nav {
+	float: left;
+	margin: 7px 3px;
+}
+
+header nav a {
+	text-decoration: none;
+	color: grey;
 }
 
 ul li {
@@ -32,6 +46,25 @@ ul li {
 	display: inline;
   	list-style-type: none;
   	padding-right: 20px;
+}
+
+h3 {
+	color: #428bca;
+	font-size: 24px;
+	text-decoration: none;
+}
+
+#pagewrap {
+	position: absolute;
+	top: 65px;
+	width: 100%;
+	height: auto;
+	margin: 10px 0;
+}
+
+#content {
+	width: 950px;
+	margin: 70px auto 0 auto;
 }
 
 
