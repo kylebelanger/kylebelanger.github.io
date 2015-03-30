@@ -1,5 +1,6 @@
-html {
+body {
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	/*background-color: #757575;*/
 }
 
 .serif {
@@ -23,17 +24,16 @@ header div {
 }
 
 header h2 {
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: normal;
 	color: grey;
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	float: left;
 	letter-spacing: 1px;
 }
 
 header nav {
 	float: left;
-	margin: 7px 3px;
+	margin: 5px 3px;
 }
 
 header nav a {
@@ -66,5 +66,29 @@ h3 {
 	width: 950px;
 	margin: 70px auto 0 auto;
 }
+
+/* Posts
+/* --------------------------- */
+
+
+.post {
+	float: left;
+	width: 900px;
+	padding-bottom: 15px;
+	border-bottom: thin dotted grey;
+}
+
+.post-img {
+	width: 350px;
+	height: auto;
+	margin: 3px 10px;
+	border: thin dotted grey;
+}
+
+.post .title {
+	color: #7094B8;
+}
+
+
 
 
