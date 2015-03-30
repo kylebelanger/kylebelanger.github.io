@@ -1,3 +1,5 @@
+
 name: Kyle Belanger
 markdown: redcarpet
+highlighter: pygments
 permalink: /:title

@@ -3,4 +3,29 @@ layout: default
 title: Kyle Belanger
 ---
 
-<h2>Home</h2>
+<!-- start posts -->
+<div id="posts-container">
+
+	<section class="post">
+		
+	    {% for post in site.categories.project %}
+	      <h2><a class="title" href="{{ post.url }}">{{ post.title }}</a></h2>
+
+	      <section class="description">
+	      	{{ post.description }}
+	      	<p><a href="{{ post.url }}">Read more...</a</p>
+	      </section>
+	      
+	    {% endfor %}
+
+	</section>
+
+</div>
+<!-- end posts -->
+
+
+
+
+
+
+
