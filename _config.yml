@@ -2,4 +2,4 @@
 name: Kyle Belanger
 markdown: redcarpet
 highlighter: pygments
-permalink: /:date:title
+permalink: /posts/:title
