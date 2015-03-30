@@ -5,23 +5,20 @@ title: Kyle Belanger
 
 <!-- start posts -->
 <div id="posts-container">
-
-	<section class="post">
 		
 	    {% for post in site.categories.project %}
-	      <h2><a class="title" href="{{ post.url }}">{{ post.title }}</a></h2>
+		<section class="post">
+	    	<h2><a class="title" href="{{ post.url }}">{{ post.title }}</a></h2>
 
-	      <section class="description">
+		    <section class="description">
 
-	      	<img class='post-img' src='img/posts/{{ post.image }}' align='right'>
-	      	{{ post.description }}
-	      	
-	      	<p><a href="{{ post.url }}">Read more...</a</p>
-	      </section>
-
+		     <img class='post-img' src='img/posts/{{ post.image }}' align='right'>
+		     {{ post.description }}
+		      	
+		     <p><a href="{{ post.url }}">Read more...</a</p>
+		    </section>
+	 	</section>
 	    {% endfor %}
-
-	</section>
 
 </div>
 <!-- end posts -->
