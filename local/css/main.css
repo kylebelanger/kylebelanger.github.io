@@ -1,0 +1,94 @@
+body {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	/*background-color: #757575;*/
+}
+
+.serif {
+	font-family: serif;
+}
+
+header {
+	position: absolute;
+	left: 0px;
+	width: 100%;
+	height: 65px;
+	background-color: #F9F9F9;
+	border-bottom: thin solid #eee;
+	margin: 2px 0;
+}
+
+header div {
+	width: 950px;
+	height: 55px;
+	margin: 10px auto 0 auto;
+}
+
+header h2 {
+	font-size: 18px;
+	font-weight: normal;
+	color: grey;
+	float: left;
+	letter-spacing: 1px;
+}
+
+header nav {
+	float: left;
+	margin: 5px 3px;
+}
+
+header nav a {
+	text-decoration: none;
+	color: grey;
+}
+
+ul li {
+  	float: left;
+	display: inline;
+  	list-style-type: none;
+  	padding-right: 20px;
+}
+
+h3 {
+	color: #428bca;
+	font-size: 24px;
+	text-decoration: none;
+}
+
+#pagewrap {
+	position: absolute;
+	top: 65px;
+	width: 100%;
+	height: auto;
+	margin: 10px 0;
+}
+
+#content {
+	width: 950px;
+	margin: 70px auto 0 auto;
+}
+
+/* Posts
+/* --------------------------- */
+
+
+.post {
+	float: left;
+	width: 900px;
+	padding-bottom: 15px;
+	border-bottom: thin dotted grey;
+}
+
+.post-img {
+	width: 350px;
+	height: auto;
+	margin: 3px 10px;
+	border: thin dotted grey;
+}
+
+.post .title {
+	color: #7094B8;
+}
+
+
+
+
