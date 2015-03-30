@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Temperature Data Visualization with D3.js"
+title:  Temperature Data Visualization with D3.js
 
 description: "
 				<img class='post-img' src='img/posts/temp_graph.png' align='right'>
