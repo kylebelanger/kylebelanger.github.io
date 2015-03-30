@@ -1,58 +1,17 @@
-<!DOCTYPE HTML>
-<html lang="en">
+---
+layout: default
+---
 
-	<head>	
-		<title>{{ page.title }}</title>
-		<meta name="viewport" content="width=device-width">
-		<link href="/css/main.css" rel="stylesheet" type="text/css">
-		<link href="/css/normalize.css" rel="stylesheet" type="text/css">
-		<meta name="Author" content="Kyle Belanger" />
-	</head>	
-	
-	
-	<body>
-	
-		<!-- start header -->
-		<header>
-			<div>
-				<h2>Kyle Belanger</h2>
-				<!-- start nav -->
-				<nav>
-					<ul>
-						<li><a href="#">About</a></li>
-						<!--<li><a href="#">Running Log</a></li>-->
-					</ul>
-				</nav>
-				<!-- end nav -->
-			</div>
-		</header>
-		<!-- end header -->
-		
-		<!-- start pagewrap -->
-		<div id="pagewrap">
+<!-- start posts -->
+<div id="posts-container">
 
-			<div id="content">
+	<section class="post">
 
-				<!-- start posts -->
-				<div id="posts-container">
+	      <section class="post-body">
+	      	{{ content }}
+	      </section>
 
-					<section class="post">
+	</section>
 
-					      <section class="post-body">
-					      	{{ content }}
-					      </section>
-
-					</section>
-
-				</div>
-				<!-- end posts -->
-
-			</div>
-
-			</div>
-			<!-- end content -->
-		</div>
-		<!-- end pagewrap -->
-	
-	</body>
-</html>
+</div>
+<!-- end posts -->
