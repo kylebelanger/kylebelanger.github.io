@@ -12,7 +12,9 @@ title: Kyle Belanger
 
 		    <section class="description">
 
-		     <img class='post-img' src='img/posts/{{ post.image }}' align='right'>
+		     <% if post.image %>
+		     	<img class='post-img' src='img/posts/{{ post.image }}' align='right'>
+		     <% end %>
 		     {{ post.description }}
 		      	
 		     <p><a href="{{ post.url }}">Read more...</a</p>
