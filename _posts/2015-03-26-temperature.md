@@ -52,7 +52,7 @@ path {
 <input type="text" id="location" name="location" placeholder="21201" onchange="updateData()" required>
 <input type="button" value="Update" onclick="updateData()" /> 
 
-<h3 id="location_display">Baltimore, MD, USA</h3>
+<h4 id="location_display" class="black">Baltimore, MD, USA</h3>
 <p>Date: <span id="previous-date">##/##</span> - <span id="current-date">##/##</span></p>
 
 <div id="graph"></div>
