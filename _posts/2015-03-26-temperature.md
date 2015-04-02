@@ -10,8 +10,6 @@ category: project
 
 A beautiful D3 learning experiment - a simple line graph displaying (past 30 days) temperature data for any location. 
 
-### About
-
 One of my goals this spring is to become more comfortable working with JavaScript. Like many web-developers, I've used random bits of JavaScript and jQuery for various things, yet I haven't taken the time to pragmatically learn the language. My aspirations of becoming a web-developer are somewhat hindered with my inabilitity of knowing JavaScript, but I've been <a href="http:github.com/kylesb/static/JS/">gradually learning</a>.
 
 This first project uses D3's graphing functions to create a simple line graph with interactive tooltip. The graph displays (past 30 days) temperature data for any input location. *sigh* (Only because the free API allows for past 30 days.)
@@ -45,6 +43,10 @@ path {
     opacity: 0.5;
 }
 
+#graph {
+	margin: 0 0 0 -5px;
+}
+
 </style>
 
 
@@ -52,7 +54,7 @@ path {
 <input type="text" id="location" name="location" placeholder="21201" onchange="updateData()" required>
 <input type="button" value="Update" onclick="updateData()" /> 
 
-<h4 id="location_display" class="black">Baltimore, MD, USA</h3>
+<p id="location_display" class="black">Baltimore, MD, USA</p>
 <p>Date: <span id="previous-date">##/##</span> - <span id="current-date">##/##</span></p>
 
 <div id="graph"></div>
