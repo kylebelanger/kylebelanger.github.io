@@ -19,7 +19,7 @@ This first project uses D3's graphing functions to create a simple line graph wi
 <style> /* set the CSS */
 
 path { 
-    stroke: grey;
+    stroke: #dcdcdc;
     stroke-width: 2;
     fill: none;
 }
@@ -47,6 +47,10 @@ path {
 	margin: 0 0 0 -25px;
 }
 
+.indent {
+	text-indent: 65px;
+}
+
 </style>
 
 
@@ -54,8 +58,8 @@ path {
 <input type="text" id="location" name="location" placeholder="21201" onchange="updateData()" required>
 <input type="button" value="Update" onclick="updateData()" /> 
 
-<p id="location_display" class="black">Baltimore, MD, USA</p>
-<p>Date: <span id="previous-date">##/##</span> - <span id="current-date">##/##</span></p>
+<p id="location_display" class="black">Location: <span class="indent">Baltimore, MD, USA</span></p>
+<p>Date: <span class="indent"><span id="previous-date">##/##</span> - <span id="current-date">##/##</span></span></p>
 
 <div id="graph"></div>
 
