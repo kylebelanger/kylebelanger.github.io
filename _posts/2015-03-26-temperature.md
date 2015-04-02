@@ -19,7 +19,7 @@ This first project uses D3's graphing functions to create a simple line graph wi
 <style> /* set the CSS */
 
 path { 
-    stroke: steelblue;
+    stroke: grey;
     stroke-width: 2;
     fill: none;
 }
