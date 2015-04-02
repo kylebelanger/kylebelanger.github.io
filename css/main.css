@@ -11,6 +11,10 @@ body {
 	font-family: "Times New Roman", sans-serif;
 }
 
+a {
+	text-decoration: none;
+}
+
 header {
 	position: absolute;
 	left: 0px;
@@ -45,10 +49,9 @@ header nav #menu {
   width: 125px;
 }
 
-h3 {
+.header {
 	color: #428bca;
-	font-size: 24px;
-	text-decoration: none;
+	font-size: 16px;
 }
 
 #pagewrap {
