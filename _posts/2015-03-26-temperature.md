@@ -57,6 +57,7 @@ path {
 <h3 id="location_display">Baltimore, MD, USA</h3>
 <p>Date: <span id="previous-date">##/##</span> - <span id="current-date">##/##</span></p>
 
+<div id="graph"></div>
 
 
 <!-- load the d3.js library -->    
@@ -106,7 +107,7 @@ var valueline = d3.svg.line()
 
 
 // Adds the svg canvas
-var svg = d3.select("body")
+var svg = d3.select("#graph")
     .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
