@@ -12,7 +12,7 @@ A beautiful D3 learning experiment - a simple line graph displaying (past 30 day
 
 One of my goals this spring is to become more comfortable working with JavaScript. Like many web-developers, I've used random bits of JavaScript and jQuery for various things, yet I haven't taken the time to pragmatically learn the language. My aspirations of becoming a web-developer are somewhat hindered with my inabilitity of knowing JavaScript, but I've been <a href="http:github.com/kylesb/static/JS/">gradually learning</a>.
 
-This first project uses D3's graphing functions to create a simple line graph with interactive tooltip. The graph displays (past 30 days) temperature data for any input location. *sigh* (Only because the free API allows for past 30 days.)
+This first project uses D3's graphing functions to create a simple line graph with interactive tooltip. The graph displays (past 30 days) temperature data for any input location. *sigh* (only because the free API allows for past 30 days.)
 
 -----------------------
 
@@ -78,8 +78,8 @@ Date.prototype.addDays = function (n) {
 // --------------------------------------
  
 // Set the dimensions of the canvas / graph
-var margin = {top: 30, right: 20, bottom: 30, left: 50},
-    width = 700 - margin.left - margin.right,
+var margin = {top: 30, right: 20, bottom: 30, left: 0},
+    width = 650 - margin.left - margin.right,
     height = 250 - margin.top - margin.bottom;
 
 // Parse the date / time
