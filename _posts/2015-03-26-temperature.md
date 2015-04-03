@@ -60,7 +60,7 @@ td {
 }
 
 .dash {
-  width: 55%;
+  width: 25%;
   height: 1px;
   border: none;
   border-bottom: thin dotted grey;
@@ -375,5 +375,5 @@ var focus = svg.append("g")
 
 </script>
 
+<p>Data source: Historical Weather API</p>
 <hr class="dash">
-Data source: Historical Weather API
