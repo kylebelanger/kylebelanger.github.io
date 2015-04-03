@@ -17,14 +17,11 @@ body {
 
 .dash {
   width: 35%;
+  height: 1px;
   border: none;
   border-bottom: thin dotted grey;
-  margin: 3px 0;
+  margin: 10px 0;
   clear: both;
-}
-
-u {
-	border-bottom: thin dotted grey;
 }
 
 h4 {
