@@ -19,7 +19,7 @@ This first project uses some of D3's graphing functions to create a simple line 
 <style> /* set the CSS */
 
 path { 
-    stroke: #C6C6C6;
+    stroke: steelblue;
     stroke-width: 2;
     fill: none;
 }
@@ -52,6 +52,7 @@ input {
   border: none;
   border-bottom: thin dotted grey;
   width: 150px;
+  font-size: 12px;
 }
 
 td {
@@ -64,7 +65,7 @@ td {
 <table style="width:800px">
   <tr>
     <td>Location:</td>
-    <td><input type="text" id="location" name="location" onchange="updateData()" placeholder="Baltimore, MD" autofocus required></td>     
+    <td><input type="text" id="location" name="location" onchange="updateData()" placeholder="Baltimore, MD" required></td>     
   </tr>
   <tr>
     <td>Date:</td>      
