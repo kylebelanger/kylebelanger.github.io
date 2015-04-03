@@ -61,8 +61,6 @@ td {
 
 </style>
 
-<p><u>Temperature Data Graph</u></p>
-
 <table style="width:800px">
   <tr>
     <td>Location:</td>
