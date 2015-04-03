@@ -375,5 +375,5 @@ var focus = svg.append("g")
 
 </script>
 
-<p>Data source: Historical Weather API</p>
+<p style="font-size: 10px; color: grey;">Data source: Historical Weather API</p>
 <hr class="dash">
