@@ -14,7 +14,7 @@ One of my goals this spring is to become more comfortable working with JavaScrip
 
 This first project uses some of D3's graphing functions to create a simple line graph with interactive tooltip. The graph displays temperature data for the past 30 days, for any input location. *Sigh, only because the free API allows for past 30 days.*
 
------------------------
+<hr class="dash">
 
 <style> /* set the CSS */
 
@@ -61,6 +61,7 @@ td {
 
 </style>
 
+<p><u>Temperature Data Graph</u></p>
 
 <table style="width:800px">
   <tr>
