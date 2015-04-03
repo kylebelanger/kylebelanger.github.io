@@ -54,6 +54,10 @@ input {
   width: 150px;
 }
 
+td {
+    margin-left: 25px;
+}
+
 </style>
 
 
