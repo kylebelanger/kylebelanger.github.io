@@ -57,7 +57,7 @@ input {
 </style>
 
 
-<table style="width:800">
+<table style="width:800px">
   <tr>
     <td>Location:</td>
     <td><input type="text" id="location" name="location" onchange="updateData()" required></td>     
