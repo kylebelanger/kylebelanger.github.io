@@ -47,7 +47,7 @@ path {
 	margin: 0 0 0 -25px;
 }
 
-input {
+input, input:focus {
   background: none;
   border: none;
   border-bottom: thin dotted grey;
@@ -64,7 +64,7 @@ td {
 <table style="width:800px">
   <tr>
     <td>Location:</td>
-    <td><input type="text" id="location" name="location" onchange="updateData()" required></td>     
+    <td><input type="text" id="location" name="location" onchange="updateData()" autofocus="true" placeholder="Baltimore, MD" required></td>     
   </tr>
   <tr>
     <td>Date:</td>      
