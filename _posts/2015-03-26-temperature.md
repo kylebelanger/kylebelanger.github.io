@@ -44,7 +44,7 @@ path {
 }
 
 #graph {
-	margin: 0 0 0 -25px;
+    margin: 0 0 0 -25px;
 }
 
 input {
@@ -59,6 +59,15 @@ td {
     margin-left: 15px;
 }
 
+.dash {
+  width: 55%;
+  height: 1px;
+  border: none;
+  border-bottom: thin dotted grey;
+  opacity: .5;
+  margin: 25px 0;
+  clear: both;
+}
 </style>
 
 <table style="width:800px">
@@ -366,8 +375,5 @@ var focus = svg.append("g")
 
 </script>
 
-
-
+<hr class="dash">
 Data source: Historical Weather API
-
-------------------------
