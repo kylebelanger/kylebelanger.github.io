@@ -20,7 +20,7 @@ This first project uses some of D3's graphing functions to create a simple line 
 
 path { 
     stroke: steelblue;
-    stroke-width: 2;
+    stroke-width: 1;
     fill: none;
 }
 
