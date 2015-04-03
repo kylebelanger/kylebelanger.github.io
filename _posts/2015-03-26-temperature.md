@@ -348,7 +348,7 @@ var focus = svg.append("g")
 
         // Make the changes
             svg.select(".line")   // change the line
-                .duration(1050)
+                .duration(750)
                 .attr("d", valueline(lineData));
 
             svg.select(".x.axis") // change the x axis
