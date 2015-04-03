@@ -4,22 +4,22 @@ title:  Temperature Data Visualization with D3.js
 
 description: <img class='post-img' src='img/posts/temp_graph.png' align='right'><p>A beautiful D3 learning experiment - a simple interactive line graph displaying (30 day range) temperature data for any location.</p> <p>One of my goals this spring is to correctly learn and become more comfortable when working with JavaScript. I say "correctly learn" because like many web-developers out there, I've used random bits of JavaScript and jQuery for various things, yet I haven't taken the time to actually learn it pragmatically.</p>
 
-date:   2015-03-28
+date:   2015-04-03
 category: project
 ---
 
-A beautiful D3 learning experiment - a simple line graph displaying (past 30 days) temperature data for any location. 
-
 One of my goals this spring is to become more comfortable working with JavaScript. Like many web-developers, I've used random bits of JavaScript and jQuery for various things, yet I haven't taken the time to pragmatically learn the language. My aspirations of becoming a web-developer are somewhat hindered with my inabilitity of knowing JavaScript, but I've been <a href="http:github.com/kylesb/static/JS/">gradually learning</a>.
 
-This first project uses D3's graphing functions to create a simple line graph with interactive tooltip. The graph displays (past 30 days) temperature data for any input location. *sigh* (Only because the free API allows for past 30 days.)
+This first project uses some of D3's graphing functions to create a simple line graph with interactive tooltip. 
+
+The graph displays temperature data for the past 30 days, for any input location. *Sigh, only because the free API allows for past 30 days.*
 
 -----------------------
 
 <style> /* set the CSS */
 
 path { 
-    stroke: #dcdcdc;
+    stroke: #C6C6C6;
     stroke-width: 2;
     fill: none;
 }
@@ -47,19 +47,28 @@ path {
 	margin: 0 0 0 -25px;
 }
 
-.indent {
-	text-indent: 65px;
+input {
+  background: none;
+  border: none;
+  border-bottom: thin dotted grey;
+  width: 150px;
 }
 
 </style>
 
 
-<label>Location:</label>
-<input type="text" id="location" name="location" placeholder="21201" onchange="updateData()" required>
-<input type="button" value="Update" onclick="updateData()" /> 
+<table style="width:400">
+  <tr>
+    <td>Location:</td>
+    <td><input type="text" id="location" name="location" onchange="updateData()" required></td>     
+  </tr>
+  <tr>
+    <td>Date:</td>      
+    <td><span id="previous-date">March 15</span> - <span id="current-date">April 15</span></td>
+  </tr>
+</table>
 
-<p id="location_display" class="black">Location: <span class="indent">Baltimore, MD, USA</span></p>
-<p>Date: <span class="indent"><span id="previous-date">##/##</span> - <span id="current-date">##/##</span></span></p>
+<p id="location_display">Baltimore, MD, USA</p>
 
 <div id="graph"></div>
 
@@ -334,7 +343,7 @@ var focus = svg.append("g")
 
         // Make the changes
             svg.select(".line")   // change the line
-                .duration(750)
+                .duration(1050)
                 .attr("d", valueline(lineData));
 
             svg.select(".x.axis") // change the x axis
@@ -347,6 +356,8 @@ var focus = svg.append("g")
 
         });
     }
+
+
     
 
 </script>
