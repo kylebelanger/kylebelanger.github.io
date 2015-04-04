@@ -374,8 +374,7 @@ var focus = svg.append("g")
 The somewhat easy part was parsing the data, and converting it to an array of objects. 
 
 <pre>
-    <code class="javascript" style="width: 600px;">
-// data variables
+    <code class="javascript" style="width: background-color: #dcdcdc;">// data variables
 var lineData = [],
     day = {};
 
@@ -390,8 +389,7 @@ d3.json(address, function(error, data) {
         day = {date: new Date(d.date), temp: d.maxtempF};   // add data to day
         lineData.push(day);                                 // push to array
 
-    });
-    </code>
+    });</code>
 </pre>
 
 Once we have the array of data objects, it's just a matter of mapping the data to the graph. The full code is available on GitHub.
