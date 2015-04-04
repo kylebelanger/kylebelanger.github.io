@@ -66,7 +66,7 @@ td {
 <table style="width:800px">
   <tr>
     <td>Location:</td>
-    <td><input type="text" id="location" name="location" onchange="updateData()" placeholder="Baltimore, MD" required></td>     
+    <td><input type="text" id="location" name="location" onkeyup="delayUpdate()" placeholder="Baltimore, MD" required></td>     
   </tr>
   <tr>
     <td>Date:</td>      
@@ -91,7 +91,6 @@ Date.prototype.addDays = function (n) {
     this.setTime(changedDate.getTime());
     return this;
 };
-
 
 // Set SVG elements 
 // --------------------------------------
@@ -123,8 +122,6 @@ var valueline = d3.svg.line()
     .x(function(d) { return x(d.date); })
     .y(function(d) { return y(d.temp); });
 
-
-
 // Adds the svg canvas
 var svg = d3.select("#graph")
     .append("svg")
@@ -134,15 +131,16 @@ var svg = d3.select("#graph")
         .attr("transform", 
               "translate(" + margin.left + "," + margin.top + ")");
 
-// tooltip
+// Tooltip
 var lineSvg = svg.append("g"); 
 var focus = svg.append("g") 
     .style("display", "none");
 
 
 
-// Get data
-// --------------------------------------
+
+    // Get initial data
+    // --------------------------------------
 
     // data variables
     var lineData = [],
@@ -157,7 +155,7 @@ var focus = svg.append("g")
     // change the dates on page
     document.getElementById('previous-date').innerHTML = previous_date.slice(5, 10);
     document.getElementById('current-date').innerHTML = current_date.slice(5, 10);
-
+    
 
     // Request and parse data
     d3.json(address, function(error, data) {
@@ -298,24 +296,41 @@ var focus = svg.append("g")
 
 
     });
-
     // End getData
     // ----------------------------------
+
+    // delayUpdate function
+    // Add event listener to pragmatically update the graph when input value is changed
+    // ----------------------------------
+    // Get location input from page
+    var input_location = document.getElementById("location"),
+        timer = null;
+
+    input_location.addEventListener('keyup', delayUpdate, false);
+
+    function delayUpdate() {
+
+        clearTimeout(timer);
+        
+        timer = setTimeout(function() {
+                    // if more than 3 charecters entered
+                    if (input_location.value.length > 2) {
+                        updateData();
+                    }
+                }, 800); // 800 milliseconds
+    }
 
     // updateData function
     // ----------------------------------
     function updateData() {
 
-        var address, 
-            url_address;
+        var url_address;
             
         lineData = [];  // reset lineData 
         day = {};       // reset day
 
-        address = document.getElementById('location').value;
-
-        var weather_api = "http://api.worldweatheronline.com/free/v2/past-weather.ashx?key=528953c5fb814683cde647b8c6e31&q=" + address + "&date=" + previous_date + "&enddate=" + current_date + "&format=json";
-        var map_api = "http://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&sensor=true";
+        var weather_api = "http://api.worldweatheronline.com/free/v2/past-weather.ashx?key=528953c5fb814683cde647b8c6e31&q=" + input_location.value + "&date=" + previous_date + "&enddate=" + current_date + "&format=json";
+        var map_api = "http://maps.googleapis.com/maps/api/geocode/json?address=" + input_location.value + "&sensor=true";
 
         // Get the data again
         d3.json(weather_api, function(error, data) {
@@ -336,8 +351,6 @@ var focus = svg.append("g")
                 // push day to results array
                 lineData.push(day);
 
-                // reset the total
-                //dailytempTotal = 0;
             });
 
             // Scale the range of the data again 
@@ -362,6 +375,7 @@ var focus = svg.append("g")
 
         });
     }
+
 
 
     
