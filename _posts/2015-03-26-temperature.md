@@ -436,7 +436,7 @@ The full code is available on <a href="http://github.com/kylesb/static/JS/temper
 
 
 <!-- highlight.js Code Highlighting files -->
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
+<link rel="stylesheet" href="/css/code_highlighting.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!-- End -->
+x
