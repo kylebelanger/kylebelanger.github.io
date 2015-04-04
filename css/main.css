@@ -55,6 +55,10 @@ header h2, .home {
 	float: left;
 }
 
+.home:hover {
+	text-decoration: none;
+}
+
 header nav {
 	float: left;
 	margin: 5px 3px;
