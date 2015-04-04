@@ -2,7 +2,7 @@
 layout: post
 title:  About
 date:   2015-04-03
-category: static
+category: project
 ---
 
 <img src="me.png" align="left">
