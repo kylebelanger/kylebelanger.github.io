@@ -48,7 +48,7 @@ header div {
 	margin: 10px auto 0 auto;
 }
 
-header h2 {
+header h2, .home {
 	font-size: 18px;
 	font-weight: normal;
 	color: grey;
