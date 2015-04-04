@@ -124,5 +124,14 @@ header nav #menu {
 }
 
 
+/* About page
+/* --------------------------- */
 
+.about-img {
+	float: left;
+	width: 350px;
+	height: auto;
+	border: thin dotted grey;
+	margin: 0 25px 0 0;
+}
 
