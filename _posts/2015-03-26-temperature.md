@@ -384,7 +384,7 @@ var focus = svg.append("g")
 
 Data source: Historical Weather API
 
-<hr class="dash">
+<hr class="dash" style="margin-bottom: 10px;">
 
 The somewhat easy part was parsing the data response, and creating an array of objects. Once we have an array of data objects, it's just a matter of mapping the data to the graph.
 
@@ -400,10 +400,8 @@ d3.json(address, function(error, data) {
 
     // step through each day
     days.forEach(function(d) {
-
         day = {date: new Date(d.date), temp: d.maxtempF};   // add data to day
         lineData.push(day);                                 // push day to array
-
     });
 };</code>
 </pre>

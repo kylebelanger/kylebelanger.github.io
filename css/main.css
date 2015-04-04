@@ -119,6 +119,8 @@ header nav #menu {
 
 .code-block {
 	margin: 0 0 15px 0;
+	border-left: thin dotted #eeeeee;
+	padding-left: 25px;
 }
 
 
