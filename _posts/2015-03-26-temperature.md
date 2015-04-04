@@ -317,7 +317,7 @@ var focus = svg.append("g")
                     if (input_location.value.length > 2) {
                         updateData();
                     }
-                }, 800); // 800 milliseconds
+                }, 500); // .5 seconds
     }
 
     // updateData function
