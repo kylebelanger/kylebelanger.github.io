@@ -10,11 +10,13 @@ category: project
 
 A beautiful D3 learning experiment - a simple interactive line graph displaying (30 day range) temperature data for any location.
 
-One of my goals this spring is to become more comfortable working with JavaScript. Like many web-developers, I've used random bits of JavaScript and jQuery for various things, yet I haven't taken the time to pragmatically learn the language. My aspirations of becoming a web-developer are somewhat hindered with my inabilitity of knowing JavaScript, but I've been <a href="http:github.com/kylesb/static/JS/">gradually learning</a>.
+One of my goals this spring is to become more comfortable when working with JavaScript. Like many web-developers, I've used random bits of JavaScript and jQuery for various things, yet I haven't taken the time to pragmatically learn the language. My aspirations of becoming a web-developer are somewhat hindered with my inabilitity of knowing JavaScript, but I've been <a href="http:github.com/kylesb/static/JS/">gradually learning</a>.
 
 This first project uses some of D3's graphing functions to create a simple line graph with interactive tooltip. The graph displays temperature data for the past 30 days, for any input location. *Sigh, only because the free API allows for past 30 days.*
 
 <hr class="dash">
+
+
 
 <style> /* set the CSS */
 
@@ -59,15 +61,6 @@ td {
     margin-left: 15px;
 }
 
-.dash {
-  width: 25%;
-  height: 1px;
-  border: none;
-  border-bottom: thin dotted grey;
-  opacity: .5;
-  margin: 25px 0;
-  clear: both;
-}
 </style>
 
 <table style="width:800px">
@@ -375,5 +368,36 @@ var focus = svg.append("g")
 
 </script>
 
-<p style="font-size: 10px; color: grey;">Data source: Historical Weather API</p>
 <hr class="dash">
+<p style="font-size: 10px;">Data source: Historical Weather API</p>
+
+The somewhat easy part was parsing the data, and converting it to an array of objects. 
+
+<pre>
+    <code class="javascript">
+// data variables
+var lineData = [],
+    day = {};
+
+// Request and parse data
+d3.json(address, function(error, data) {
+
+    var days = data.data.weather;
+
+    // step through each day
+    days.forEach(function(d) {
+
+        day = {date: new Date(d.date), temp: d.maxtempF};   // add data to day
+        lineData.push(day);                                 // push to array
+
+    });
+    </code>
+</pre>
+
+Once we have the array of data objects, it's just a matter of mapping the data to the graph. The full code is available on GitHub.
+
+
+
+<link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/github.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
