@@ -16,11 +16,11 @@ body {
 }
 
 .dash {
-  width: 35%;
+  width: 25%;
   height: 1px;
   border: none;
-  border-bottom: thin dotted grey;
-  margin: 10px 0;
+  border-top: 1px solid #eeeeee;
+  margin: 25px 0;
   clear: both;
 }
 
