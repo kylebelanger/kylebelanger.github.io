@@ -133,5 +133,6 @@ header nav #menu {
 	height: auto;
 	border: thin dotted grey;
 	margin: 0 25px 0 0;
+	opacity: .9;
 }
 
