@@ -14,6 +14,8 @@ One of my goals this spring is to become more comfortable when working with Java
 
 This first project uses some of D3's graphing functions to create a simple line graph with interactive tooltip. The graph displays temperature data for the past 30 days, for any input location. *Sigh, only because the free API allows for past 30 days.*
 
+The full code is available on GitHub.
+
 <hr class="dash">
 
 
@@ -370,6 +372,3 @@ var focus = svg.append("g")
 
 <hr class="dash">
 Data source: Historical Weather API
-
-The full code is available on GitHub.
-
