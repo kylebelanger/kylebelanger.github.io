@@ -384,7 +384,7 @@ var focus = svg.append("g")
 
 Data source: Historical Weather API
 
-<hr class="dash" style="margin-bottom: 10px;">
+<hr class="dash" style="margin-bottom: 30px;">
 
 The somewhat easy part was parsing the data response, and creating an array of objects. Once we have an array of data objects, it's just a matter of mapping the data to the graph.
 
