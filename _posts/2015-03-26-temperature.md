@@ -382,8 +382,6 @@ var focus = svg.append("g")
 
 </script>
 
-Data source: Historical Weather API
-
 <hr class="dash" style="margin-bottom: 30px;">
 
 The somewhat easy part was parsing the data response, and creating an array of objects. Once we have an array of data objects, it's just a matter of mapping the data to the graph.
@@ -419,4 +417,3 @@ The full code is available on <a href="http://github.com/kylesb/static/JS/temper
 <link rel="stylesheet" href="/css/code_highlighting.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-x
