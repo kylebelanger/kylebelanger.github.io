@@ -66,7 +66,7 @@ td {
 <table style="width:800px">
   <tr>
     <td>Location:</td>
-    <td><input type="text" id="location" name="location" onkeyup="delayUpdate()" placeholder="Baltimore, MD" required></td>     
+    <td><input type="text" id="location" name="location" onkeyup="delayUpdate()" onchange="updateData()" placeholder="Baltimore, MD" required></td>     
   </tr>
   <tr>
     <td>Date:</td>      
@@ -155,7 +155,7 @@ var focus = svg.append("g")
     // change the dates on page
     document.getElementById('previous-date').innerHTML = previous_date.slice(5, 10);
     document.getElementById('current-date').innerHTML = current_date.slice(5, 10);
-    
+
 
     // Request and parse data
     d3.json(address, function(error, data) {
