@@ -388,7 +388,7 @@ Data source: Historical Weather API
 
 The somewhat easy part was parsing the data response, and creating an array of objects. Once we have an array of data objects, it's just a matter of mapping the data to the graph.
 
-<pre>
+<pre class="code-block">
 <code>// data variables
 var lineData = [],
     day = {};
@@ -410,7 +410,7 @@ d3.json(address, function(error, data) {
 
 The graph is updated pragmatically as the input value changes. This is accomplished by adding an (onKeyUp) event listener and setting a timeout delay to avoid requesting data with every keystroke. 
 
-<pre>
+<pre class="code-block">
 <code>// Get location input from page
 var input_location = document.getElementById("location"),
     timer = null;
@@ -430,5 +430,11 @@ function delayUpdate() {
 }</code>
 </pre>
 
-
 The full code is available on <a href="http://github.com/kylesb/static/JS/temperature-data">GitHub</a>.
+
+
+
+
+<!-- highlight.js Code Highlighting files -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
