@@ -108,6 +108,7 @@ header nav #menu {
 }
 
 .post-img {
+	float: right;
 	width: 350px;
 	height: auto;
 	margin: 3px 10px;
