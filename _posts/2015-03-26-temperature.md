@@ -374,7 +374,7 @@ var focus = svg.append("g")
 The somewhat easy part was parsing the data, and converting it to an array of objects. 
 
 <pre>
-    <code class="javascript" style="width: background-color: #dcdcdc;">// data variables
+    <code class="javascript" style="width: background-color: none; border-left: thin dotted grey; padding-left: 15px;">// data variables
 var lineData = [],
     day = {};
 
