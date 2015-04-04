@@ -2,7 +2,6 @@
 layout: post
 title:  About
 date:   2015-04-03
-category: static
 ---
 
 <img src="me.png" align="left">
