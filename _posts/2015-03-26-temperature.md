@@ -386,6 +386,49 @@ Data source: Historical Weather API
 
 <hr class="dash">
 
-The somewhat easy part was parsing the data, and adding them to an array of objects. Once we have an array of data objects, it's just a matter of mapping the data to the graph. 
+The somewhat easy part was parsing the data response, and creating an array of objects. Once we have an array of data objects, it's just a matter of mapping the data to the graph.
 
-The full code is available on GitHub.
+<pre>
+<code>// data variables
+var lineData = [],
+    day = {};
+
+// Request and parse data
+d3.json(address, function(error, data) {
+
+    var days = data.data.weather;
+
+    // step through each day
+    days.forEach(function(d) {
+
+        day = {date: new Date(d.date), temp: d.maxtempF};   // add data to day
+        lineData.push(day);                                 // push day to array
+
+    });
+};</code>
+</pre>
+
+The graph is updated pragmatically as the input value changes. This is accomplished by adding an (onKeyUp) event listener and setting a timeout delay to avoid requesting data with every keystroke. 
+
+<pre>
+<code>// Get location input from page
+var input_location = document.getElementById("location"),
+    timer = null;
+
+input_location.addEventListener('keyup', delayUpdate, false);
+
+function delayUpdate() {
+
+    clearTimeout(timer);
+    
+    timer = setTimeout(function() {
+                // if more than 3 charecters entered
+                if (input_location.value.length > 2) {
+                    updateData();
+                }
+            }, 500); // .5 seconds
+}</code>
+</pre>
+
+
+The full code is available on <a href="http://github.com/kylesb/static/JS/temperature-data">GitHub</a>.
