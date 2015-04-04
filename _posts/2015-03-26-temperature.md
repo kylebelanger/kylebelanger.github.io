@@ -369,33 +369,7 @@ var focus = svg.append("g")
 </script>
 
 <hr class="dash">
-<p style="font-size: 10px;">Data source: Historical Weather API</p>
+Data source: Historical Weather API
 
-The somewhat easy part was parsing the data, and converting it to an array of objects. 
+The full code is available on GitHub.
 
-<pre>
-    <code class="javascript" style="width: background: #fff; border-left: thin dotted grey; padding-left: 15px;">// data variables
-var lineData = [],
-    day = {};
-
-// Request and parse data
-d3.json(address, function(error, data) {
-
-    var days = data.data.weather;
-
-    // step through each day
-    days.forEach(function(d) {
-
-        day = {date: new Date(d.date), temp: d.maxtempF};   // add data to day
-        lineData.push(day);                                 // push to array
-
-    });</code>
-</pre>
-
-Once we have the array of data objects, it's just a matter of mapping the data to the graph. The full code is available on GitHub.
-
-
-
-<link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/github.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
