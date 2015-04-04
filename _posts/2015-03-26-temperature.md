@@ -10,7 +10,7 @@ category: project
 
 A beautiful D3 learning experiment - a simple interactive line graph displaying (30 day range) temperature data for any location.
 
-One of my goals this spring is to become more comfortable when working with JavaScript. Like many web-developers, I've used random bits of JavaScript and jQuery for various things, yet I haven't taken the time to pragmatically learn the language. My aspirations of becoming a web-developer are somewhat hindered with my inabilitity of knowing JavaScript, but I've been <a href="http:github.com/kylesb/static/JS/">gradually learning</a>.
+One of my goals this spring is to become more comfortable when working with JavaScript. Like many web-developers, I've used random bits of JavaScript and jQuery for various things, yet I haven't taken the time to pragmatically learn the language. My aspirations of becoming a web-developer are somewhat hindered with my inabilitity of knowing JavaScript, but I've been <a href="https://github.com/kylesb/static/tree/master/JS">gradually learning</a>.
 
 This first project uses some of D3's graphing functions to create a simple line graph with interactive tooltip. The graph displays temperature data for the past 30 days, for any input location. *Sigh, only because the free API allows for past 30 days.*
 

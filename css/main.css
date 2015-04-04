@@ -55,8 +55,9 @@ header h2, .home {
 	float: left;
 }
 
-.home:hover {
+header h2 .home:hover {
 	text-decoration: none;
+	color: black;
 }
 
 header nav {
@@ -139,4 +140,34 @@ header nav #menu {
 	margin: 0 25px 0 0;
 	opacity: .9;
 }
+
+
+/* Media queries
+/* --------------------------- */
+
+/* Media queries
+/* --------------------------- */
+
+@media screen and (max-width: 940px) {
+	
+	header div, #content, .post {
+		width: 100%;
+	}
+
+	header div {
+		padding: 0 10px;
+	}
+
+	#content {
+		margin: 30px 0;
+		padding: 0 10px;
+	}
+
+	.post-img, .about-img {
+		float: left;
+		margin: 10px 100% 25px 0;
+	}
+
+}
+
 
