@@ -2,7 +2,7 @@
 layout: post
 title:  Temperature Data Visualization with D3.js
 
-description: <img class='post-img' src='img/posts/temp_graph.png' align='right'><p>A beautiful D3 learning experiment - a simple interactive line graph displaying (30 day range) temperature data for any location.</p> <p>One of my goals this spring is to correctly learn and become more comfortable when working with JavaScript. I say "correctly learn" because like many web-developers out there, I've used random bits of JavaScript and jQuery for various things, yet I haven't taken the time to actually learn it pragmatically.</p>
+description: <img class='post-img' src='img/posts/temp_graph.png'><p>A beautiful D3 learning experiment - a simple interactive line graph displaying (30 day range) temperature data for any location.</p> <p>One of my goals this spring is to correctly learn and become more comfortable when working with JavaScript. I say "correctly learn" because like many web-developers out there, I've used random bits of JavaScript and jQuery for various things, yet I haven't taken the time to actually learn it pragmatically.</p>
 
 date:   2015-04-03
 category: project
