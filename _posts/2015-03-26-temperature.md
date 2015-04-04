@@ -408,7 +408,7 @@ function delayUpdate() {
 }</code>
 </pre>
 
-The full code is available on <a href="http://github.com/kylesb/static/JS/temperature-data">GitHub</a>.
+The full code is available on <a href="https://github.com/kylesb/static/blob/master/JS/temperature-graph/index.html">GitHub</a>.
 
 
 
