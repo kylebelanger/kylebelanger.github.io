@@ -423,11 +423,21 @@ function delayUpdate() {
                 if (input_location.value.length > 2) {
                     updateData();
                 }
-            }, 500); // .5 seconds
+            }, 500); // 500 milliseconds delay
 }</code>
 </pre>
 
-The full code is available on <a href="https://github.com/kylesb/static/blob/master/JS/temperature-graph/index.html">GitHub</a> <br>Data source: <a href="http://www.worldweatheronline.com/api/docs/historical-weather-api.aspx">Historic Weather API</a>.
+
+<table style="width:400px">
+  <tr>
+    <td>The full code is available on:</td>
+    <td><a href="https://github.com/kylesb/static/blob/master/JS/temperature-graph/index.html">GitHub</a></td>     
+  </tr>
+  <tr>
+    <td>Date source:</td>      
+    <td><a href="http://www.worldweatheronline.com/api/docs/historical-weather-api.aspx">Historic Weather API</a></td>
+  </tr>
+</table>
 
 
 
