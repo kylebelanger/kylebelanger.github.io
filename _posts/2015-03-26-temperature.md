@@ -427,6 +427,7 @@ function delayUpdate() {
 }</code>
 </pre>
 
+<hr class="dash">
 
 <table style="width:400px">
   <tr>
