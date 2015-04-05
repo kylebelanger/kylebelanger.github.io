@@ -386,6 +386,25 @@ var focus = svg.append("g")
 
 The somewhat easy part was parsing the data response, and creating an array of objects. Once we have an array of data objects, it's just a matter of mapping the data to the graph.
 
+<pre class="code-block">
+<code>// data variables
+var lineData = [],
+    day = {};
+
+// Request and parse data
+d3.json(address, function(error, data) {
+
+    var days = data.data.weather;
+
+    // step through each day
+    days.forEach(function(d) {
+        day = {date: new Date(d.date), temp: d.maxtempF};   // add data to day
+        lineData.push(day);                                 // push to array
+    });
+});
+</code>
+</pre>
+
 The graph is updated pragmatically as the input value changes. This is accomplished by adding an (onKeyUp) event listener and setting a timeout delay to avoid requesting data with every keystroke. 
 
 <pre class="code-block">
