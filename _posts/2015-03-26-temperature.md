@@ -423,7 +423,7 @@ function delayUpdate() {
                 if (input_location.value.length > 2) {
                     updateData();
                 }
-            }, 500); // 500 milliseconds delay
+            }, 500); // .5 second delay
 }</code>
 </pre>
 
