@@ -427,7 +427,8 @@ function delayUpdate() {
 }</code>
 </pre>
 
-The full code is available on <a href="https://github.com/kylesb/static/blob/master/JS/temperature-graph/index.html">GitHub</a> Data source: <a href="http://www.worldweatheronline.com/api/docs/historical-weather-api.aspx">Historic Weather API</a>.
+The full code is available on <a href="https://github.com/kylesb/static/blob/master/JS/temperature-graph/index.html">GitHub</a> 
+Data source: <a href="http://www.worldweatheronline.com/api/docs/historical-weather-api.aspx">Historic Weather API</a>.
 
 
 
