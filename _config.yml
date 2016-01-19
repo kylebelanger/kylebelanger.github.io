@@ -1,5 +1,4 @@
-
-name: Kyle Belanger
-markdown: redcarpet
-highlighter: pygments
-permalink: /posts/:title
+name: 			Kyle Belanger
+markdown: 		redcarpet
+highlighter: 	pygments
+permalink: 		/posts/:title

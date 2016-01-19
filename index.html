@@ -3,30 +3,70 @@ layout: default
 title: Kyle Belanger
 ---
 
+<!-- right section -->
+<div id="right-section" class="pull-right">
+
+	<div id="running-log-container">
+
+		<div id="running-heatmap">
+			<p class="times 12px">Running <a href="https://raw.githubusercontent.com/kylesb/static/master/JSON/running_log.json">log:</a> <span data-container="body" data-trigger="hover" data-toggle="popover" data-placement="left" data-content="This is a JSON compiled heatmap of my daily running log.">(?)</span></p>
+
+			<div id="button-container" class="pull-right">
+				<button id="previous" type="button" class="button-icon">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				</button>
+				<button id="next" type="button" class="button-icon">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				</button>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+<!-- / right -->
+
 <!-- start posts -->
 <div id="posts-container">
-
-		<h4 class="black">Projects</h4>
 		
-	    {% for post in site.categories.project %}
-		<section class="post">
-	    	<h4><a class="title" href="{{ post.url }}">{{ post.title }}</a></h4>
+	{% for post in site.posts %}
+	<section class="post">
+		<h4>
+			<span>{{ (post.date | date_to_string }} -</span>
+			{% if post.link != null %}
+				<a class="title" href="{{ post.link }}">{{ post.title }}</a>
+			{% else %}
+				<a class="title" href="{{ post.url }}">{{ post.title }}</a>
+			{% endif %}
+		</h4>
 
-		    <section class="description">
+	    <section class="description">
 
-		     {{ post.description }}
-		      	
-		     <p><a href="{{ post.url }}">Read more...</a</p>
-		    </section>
-	 	</section>
-	    {% endfor %}
+	    	{{ post.description }}
+
+			{% if post.readmore != null %}
+		    	<p><a href="{{ post.readmore }}">Read more...</a></p>
+			{% else %}
+		    	<p><a href="{{ post.url }}">Read more...</a></p>
+			{% endif %}
+		</section>
+	
+	</section>
+	{% endfor %}
 
 </div>
 <!-- end posts -->
 
 
+<!-- load scripts for this page -->
+<script type="text/javascript" src="js/vendor/cal-heatmap.js"></script>
+<script type="text/javascript" src="js/running-log.js"></script>
+<link rel="stylesheet" href="css/vendor/cal-heatmap.css" />
 
-
-
-
-
+<!-- tooltip -->
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover()
+});
+</script>
+<!-- / tooltip -->

@@ -1,23 +1,57 @@
----
-layout: post
+<!DOCTYPE HTML>
+<html lang="en">
 
-description: "A D3.js learning experiment - a simple, interactive line graph displaying (30 day range) temperature data for any input location."
+	<head>	
+		<title>Temperature Data Visualization with D3.js</title>
+		<meta name="viewport" content="width=device-width">
+		<link href="/css/main.css" rel="stylesheet" type="text/css">
+		<link href="/css/vendor/normalize.css" rel="stylesheet" type="text/css">
+		<link href="/css/vendor/bootstrap.css" rel="stylesheet" type="text/css">
+		
+		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<script src="https://code.jquery.com/jquery-2.2.0.js" charset="utf-8"></script>
+		<script src="js/vendor/bootstrap.js" charset="utf-8"></script>
 
-title:  "Temperature Data Visualization with D3.js"
-date:   2015-04-03
+		<meta name="author" content="Kyle Belanger" />
+	</head>	
+	
+	
+	<body>
+	
+		<!-- start header -->
+		<header>
+			<div>
+				<section class="pull-right">
+					<h2><a class="home" href="/">Kyle Belanger</a></h2>
+					<button type="button" class="button-icon pull-right" id="nav-display-button">
+						<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+					</button>
+				</section>
+			</div>
+		</header>
+		<!-- end header -->
 
-link:       null
-readmore:   null
----
+		<!-- start pagewrap -->
+		<div id="pagewrap">
+			<div id="content">
+				<!-- start posts -->
+<div id="posts-container">
 
-A beautiful D3.js learning experiment - a simple interactive line graph displaying historical temperature data (30 day range) for any input location. *( Sigh... the free API only allows queries of 30 day intervals. )* 
+	<section class="post">
 
-This first project uses some of D3's graphing functions, <code>d3.svg.axis()</code>, and <code>d3.svg.line()</code> to draw an SVG-based line graph with interactive tooltip. The historical weather data API response is parsed, formatted, and displayed as a set of <i>x</i> (date) and <i>y</i> (fahrenheit temperature) axis values.
+		<h4>
+			<a href="/">Index</a>
+			<span>> Temperature Data Visualization with D3.js</span>
+		</h4>
+		<p>03 Apr 2015</p>
+		<hr>
 
+	      <section class="post-body">
+	      	<p>A beautiful D3.js learning experiment - a simple interactive line graph displaying historical temperature data (30 day range) for any input location. <em>( Sigh... the free API only allows queries of 30 day intervals. )</em> </p>
 
-<hr class="dash">
+<p>This first project uses some of D3&#39;s graphing functions, <code>d3.svg.axis()</code>, and <code>d3.svg.line()</code> to draw an SVG-based line graph with interactive tooltip. The historical weather data API response is parsed, formatted, and displayed as a set of <i>x</i> (date) and <i>y</i> (fahrenheit temperature) axis values.</p>
 
-
+<p><hr class="dash"></p>
 
 <style> /* set the CSS */
 
@@ -78,7 +112,6 @@ td {
 <p id="location_display">Baltimore, MD, USA</p>
 
 <div id="graph"></div>
-
 
 <script>
 
@@ -381,9 +414,9 @@ var focus = svg.append("g")
 
 </script>
 
-<hr class="dash" style="margin-bottom: 30px;">
+<p><hr class="dash" style="margin-bottom: 30px;"></p>
 
-The somewhat easy part was parsing the data response, and creating an array of objects. Once we have an array of data objects, it's just a matter of mapping the data to the graph.
+<p>The somewhat easy part was parsing the data response, and creating an array of objects. Once we have an array of data objects, it&#39;s just a matter of mapping the data to the graph.</p>
 
 <pre class="code-block">
 <code>// data variables
@@ -404,7 +437,7 @@ d3.json(address, function(error, data) {
 </code>
 </pre>
 
-The graph is updated asynchronously with a two-second timeout as the input value changes. This is accomplished by adding an <code>onKeyUp()</code> event listener to the form input, and setting a timeout delay to avoid requesting data with each keystroke. 
+<p>The graph is updated asynchronously with a two-second timeout as the input value changes. This is accomplished by adding an <code>onKeyUp()</code> event listener to the form input, and setting a timeout delay to avoid requesting data with each keystroke. </p>
 
 <pre class="code-block">
 <code>// Get location input from page
@@ -426,7 +459,7 @@ function delayUpdate() {
 }</code>
 </pre>
 
-<hr class="dash">
+<p><hr class="dash"></p>
 
 <table style="width:400px">
   <tr>
@@ -439,10 +472,38 @@ function delayUpdate() {
   </tr>
 </table>
 
-
-
-
 <!-- highlight.js Code Highlighting files -->
-<link rel="stylesheet" href="/css/code_highlighting.css">
+
+<p><link rel="stylesheet" href="/css/code_highlighting.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+<script>hljs.initHighlightingOnLoad();</script></p>
+
+	      </section>
+
+	</section>
+
+</div>
+<!-- end posts -->
+			</div>
+		</div>
+		<!-- end pagewrap -->
+	
+	</body>
+
+	<!-- Google analytics -->
+	<script>
+	
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-61575718-1']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();        
+
+	</script>
+	<!-- end analytics -->
+
+</html>
