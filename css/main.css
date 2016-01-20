@@ -54,12 +54,12 @@ header #header-wrapper {
 }
 
 header #header-wrapper section {
-	width: 160px;
+	width: 130px;
 	margin: -2px 0 0 0;
 }
 
 header #header-wrapper section h2 #home {
-	font-size: 18px;
+	font-size: 14px;
 	font-weight: normal;
 	color: grey;
 	float: left;
@@ -132,7 +132,7 @@ hr.dash {
 
 #content #right-section {
 	width: 225px;
-	min-height: 250px;
+	min-height: 450px;
 	border-left: thin dotted #dcdcdc;
 }
 
