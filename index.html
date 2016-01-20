@@ -29,20 +29,20 @@ title: Kyle Belanger
 				{% for post in site.posts %}
 				<section class="post">
 					<h4><span>{{ (post.date | date_to_string }} -</span>
-						{% if post.link != null 
-						%}<a class="title" href="{{ post.link }}">{{ post.title }}</a>
-						{% else 
-						%}<a class="title" href="{{ post.url }}">{{ post.title }}</a>{% endif %}
+						{% if post.link != null %}
+						<a class="title" href="{{ post.link }}">{{ post.title }}</a>
+						{% else %}
+						<a class="title" href="{{ post.url }}">{{ post.title }}</a>
+						{% endif %}
 					</h4>
 
-				    	<section class="description">{{ post.description }}{% 
-				    if post.readmore != null 
-				    	%}<p><a href="{{ post.readmore }}">Read more...</a></p>{% 
-				    else 
-				    %}<p><a href="{{ post.url }}">Read more...</a></p>{% 
-				    endif %}
+				    <section class="description">{{ post.description }}{% 
+				    if post.readmore != null %}
+				    	<p><a href="{{ post.readmore }}">Read more...</a></p>
+				    {% else %}
+				    	<p><a href="{{ post.url }}">Read more...</a></p>
+				    {% endif %}
 					</section>
-				
 				</section>
 				{% endfor %}
 			</div>
