@@ -8,7 +8,17 @@ button {
 	border: thin dotted grey;
 }
 
+.width-800px {
+	width: 800px;
+}
 
+.width-400px {
+	width: 400px;
+}
+
+.margin-bottom-30px {
+	margin-bottom: 30px;
+}
 
 .serif {
 	font-family: serif;
@@ -34,7 +44,7 @@ button {
 	float: left;
 }
 
-header div section {
+header #header-wrapper section {
 	width: 160px;
 }
 
@@ -65,7 +75,7 @@ header {
 	margin: 2px 0;
 }
 
-header div {
+header #header-wrapper {
 	width: 950px;
 	height: 55px;
 	margin: 10px auto 0 auto;
