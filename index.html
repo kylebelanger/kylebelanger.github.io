@@ -36,8 +36,8 @@ title: Kyle Belanger
 						{% endif %}
 					</h4>
 
-				    <section class="description">{{ post.description }}{% 
-				    if post.readmore != null %}
+				    <section class="description">{{ post.description }}
+				    {% if post.readmore != null %}
 				    	<p><a href="{{ post.readmore }}">Read more...</a></p>
 				    {% else %}
 				    	<p><a href="{{ post.url }}">Read more...</a></p>
