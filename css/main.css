@@ -1,11 +1,92 @@
+/* Global
+/* --------------------------- */
+
 body {
 	font-family: 'Lora', serif;
-	/*background-color: #757575;*/
+}
+
+h4 {
+	font-size: 14px;
+	font-weight: normal;
+}
+
+a {
+	text-decoration: none;
+}
+
+#pagewrap {
+	position: absolute;
+	top: 65px;
+	width: 100%;
+	height: auto;
+	margin: 10px 0;
+}
+
+#content {
+	width: 950px;
+	margin: 70px auto 0 auto;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
 }
 
 button {
-	background-color: transparent;
-	border: thin dotted grey;
+    background-color: transparent;
+    border: thin dotted grey;
+}
+
+header {
+	position: absolute;
+	left: 0px;
+	width: 100%;
+	height: 65px;
+	border-bottom: thin solid #eee;
+	margin: 2px 0;
+}
+
+header #header-wrapper {
+	width: 950px;
+	height: 55px;
+	margin: 10px auto 0 auto;
+}
+
+header #header-wrapper section {
+	width: 160px;
+	margin: -2px 0 0 0;
+}
+
+header #header-wrapper section h2 #home {
+	font-size: 18px;
+	font-weight: normal;
+	color: grey;
+	float: left;
+}
+
+header #header-wrapper section h2 #home:hover {
+	text-decoration: none;
+	color: black;
+}
+
+header #header-wrapper section #nav-display-button {
+    margin: -2px 0 0 0;
+}
+
+/* Misc...
+/* --------------------------- */
+
+.pull-right {
+	float: right;
+}
+
+.pull-left {
+	float: left;
+}
+
+.button-icon {
+    opacity: .3;
 }
 
 .width-800px {
@@ -14,15 +95,6 @@ button {
 
 .width-400px {
 	width: 400px;
-}
-
-.block-img {
-	float: left;
-	width: 450px;
-	height: auto;
-	border: thin dotted grey;
-	opacity: .8;
-	margin: 25px 0 0 0;
 }
 
 .margin-bottom-30px {
@@ -45,19 +117,7 @@ button {
 	color: #000;
 }
 
-.pull-right {
-	float: right;
-}
-
-.pull-left {
-	float: left;
-}
-
-header #header-wrapper section {
-	width: 160px;
-}
-
-.dash {
+hr.dash {
   width: 950px;
   height: 1px;
   border: none;
@@ -66,110 +126,31 @@ header #header-wrapper section {
   clear: both;
 }
 
-h4 {
-	font-size: 14px;
-	font-weight: normal;
-}
 
-a {
-	text-decoration: none;
-}
+/* Index
+/* --------------------------- */
 
-header {
-	position: absolute;
-	left: 0px;
-	width: 100%;
-	height: 65px;
-	border-bottom: thin solid #eee;
-	margin: 2px 0;
-}
-
-header #header-wrapper {
-	width: 950px;
-	height: 55px;
-	margin: 10px auto 0 auto;
-}
-
-header h2, .home {
-	font-size: 18px;
-	font-weight: normal;
-	color: grey;
-	float: left;
-}
-
-header h2 .home:hover {
-	text-decoration: none;
-	color: black;
-}
-
-header nav {
-	float: left;
-	margin: 5px 3px;
-}
-
-header nav #menu {
-	margin: 15px 17px;
-	font-size: 10px;
-  border: thin dotted #dcdcdc;
-  width: 125px;
-}
-
-#nav-display-button {
-    margin: 12px 0 0 0;
-}
-
-#pagewrap {
-	position: absolute;
-	top: 65px;
-	width: 100%;
-	height: auto;
-	margin: 10px 0;
-}
-
-#content {
-	width: 950px;
-	margin: 70px auto 0 auto;
-}
-
-.button-icon {
-
-    opacity: .3;
-}
-
-.pull-right {
-    float: right!important;
-}
-
-.glyphicon-menu-hamburger:before {
-    content: "\e236";
-}
-
-button, input, select, textarea {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-}
-
-#right-section {
+#content #right-section {
 	width: 225px;
 	min-height: 250px;
 	border-left: thin dotted #dcdcdc;
 }
 
-#running-log-container {
+#content #right-section #running-log-container {
 	width: 100%;
 	height: 300px;
 }
 
-#running-heatmap {
+#content #right-section #running-log-container #running-heatmap {
 	width: 175px;
 	float: right;
 	margin: -10px 5px 0 0;
 }
 
-#button-container {
+#content #right-section #running-log-container #running-heatmap #button-container {
 	margin-bottom: -35px;
 }
+
 
 /* Posts
 /* --------------------------- */
@@ -207,6 +188,15 @@ button, input, select, textarea {
 	border: thin dotted grey;
 }
 
+.block-img {
+	float: left;
+	width: 450px;
+	height: auto;
+	border: thin dotted grey;
+	opacity: .8;
+	margin: 25px 0 0 0;
+}
+
 .post .title {
 	color: #36559C;
 }
@@ -223,17 +213,7 @@ button, input, select, textarea {
 }
 
 
-/* About page
-/* --------------------------- */
 
-.about-img {
-	float: left;
-	width: 250px;
-	height: auto;
-	border: thin dotted grey;
-	margin: 0 25px 0 0;
-	opacity: .9;
-}
 
 
 /* Media queries
@@ -243,18 +223,26 @@ button, input, select, textarea {
 /* --------------------------- */
 
 @media screen and (max-width: 940px) {
-	
-	header div, #content, .post {
+
+	header #header-wrapper, #content, .post {
 		width: 100%;
 	}
 
-	header div {
+	header #header-wrapper {
 		padding: 0 10px;
 	}
 
 	#content {
 		margin: 30px 0;
 		padding: 0 10px;
+	}
+
+	#content #right-section {
+		display: none;
+	}
+
+	#posts-container, .post, .post-body {
+		width: 100%;
 	}
 
 	.post-img, .about-img {
