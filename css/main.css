@@ -224,7 +224,7 @@ hr.dash {
 
 @media screen and (max-width: 940px) {
 
-	header #header-wrapper, #content, .post {
+	header #header-wrapper, #content, .post, header #header-wrapper section {
 		width: 100%;
 	}
 
