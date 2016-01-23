@@ -1,7 +1,7 @@
 ---
 layout: post
 
-description: "A D3.js learning experiment - a simple, interactive line graph displaying (30 day range) temperature data for any input location."
+description: "A D3.js learning <a href='/posts/temperature'>experiment</a> - a simple line graph with tooltip, displaying (30 day range) historical temperature data for any input location."
 
 title:  "Temperature Data Visualization with D3.js"
 date:   2015-04-03
@@ -19,7 +19,7 @@ This first project uses some of D3's graphing functions, <code>d3.svg.axis()</co
 <table class="width-800px">
   <tr>
     <td>Location:</td>
-    <td><input type="text" id="location" name="location" onkeyup="delayUpdate()" onchange="updateData()" placeholder="Baltimore, MD" required></td>     
+    <td><input type="text" id="location" name="location" onkeyup="delayUpdate()" onchange="updateData()" placeholder="Baltimore, MD" required autofocus></td>     
   </tr>
   <tr>
     <td>Date:</td>      

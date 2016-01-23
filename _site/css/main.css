@@ -151,6 +151,10 @@ hr.dash {
 	margin-bottom: -35px;
 }
 
+section.description {
+    margin: 10px 0;
+}
+
 
 /* Posts
 /* --------------------------- */
@@ -167,7 +171,13 @@ hr.dash {
 }
 
 .title {
-	color: #36559C;
+	color: #000 !important;
+	text-decoration: none;
+}
+
+.title:hover {
+	text-decoration: none !important;
+	border-bottom: thin solid grey;
 }
 
 .post:after {

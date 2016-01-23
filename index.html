@@ -28,19 +28,19 @@ title: Kyle Belanger
 			<div id="posts-container">
 				{% for post in site.posts %}
 				<section class="post">
-					<h4><span>{{ (post.date | date_to_string }} -</span>
-						{% if post.link != null %}
-						<a class="title" href="{{ post.link }}">{{ post.title }}</a>
-						{% else %}
-						<a class="title" href="{{ post.url }}">{{ post.title }}</a>
-						{% endif %}
+					<h4>
+					{% if post.link != null %}
+						<span><a class="title" href="{{ post.link }}">{{ (post.date | date_to_string }}</a></span>
+					{% else %}
+						<span><a class="title" href="{{ post.url }}">{{ (post.date | date_to_string }}</a></span>
+					{% endif %}
 					</h4>
 
 				    <section class="description">{{ post.description }}
 				    {% if post.readmore != null %}
-				    	<p><a href="{{ post.readmore }}">Read more...</a></p>
+				    	<small title="Read more...">( <a href="{{ post.readmore }}">...</a> )</small>
 				    {% else %}
-				    	<p><a href="{{ post.url }}">Read more...</a></p>
+				    	<small title="Read more...">( <a href="{{ post.url }}">...</a> )</small>
 				    {% endif %}
 					</section>
 				</section>
