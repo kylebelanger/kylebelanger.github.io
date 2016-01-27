@@ -242,6 +242,15 @@ section.description {
 		padding: 0 10px;
 	}
 
+	.dropdown-menu {
+	    top: 25px !important;
+	    left: 0 !important;
+	    right: 0 !important;
+	    width: 100% !important;
+	    float: left !important;
+	    margin-bottom: 20px !important;
+	}
+
 	#content {
 		margin: 30px 0;
 		padding: 0 10px;
