@@ -49,7 +49,6 @@ function convertRunningLog() {
       },
       weekStartOnMonday: false,
       displayLegend: false,
-
       legendColors: {
           min: "#ecf5e2",
           max: "#305920"

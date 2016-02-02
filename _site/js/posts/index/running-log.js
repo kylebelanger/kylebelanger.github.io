@@ -11,7 +11,7 @@ function convertRunningLog() {
 
   // Get running log file from repository
   d3.json(json_url, function(error, result) {
-    
+
     // for each data entry
     for (var i = 0; i < result.data.length; i++) {
 
@@ -22,7 +22,7 @@ function convertRunningLog() {
       // set date and miles
       ob[apoche.toString()] = miles;
     }
-    
+
     var json_string = JSON.stringify(ob);
     data = JSON.parse(json_string);
 
@@ -32,7 +32,6 @@ function convertRunningLog() {
       domain: "month",
       subDomain: "x_day",
       data: data,
-      start: new Date(2016, 0, 5),
       cellSize: 20,
       cellPadding: 5,
       domainGutter: 20,
@@ -62,7 +61,7 @@ function convertRunningLog() {
   });
 }
 
-// Convert strings to date objects 
+// Convert strings to date objects
 function date_to_epoch(key) {
   var epoch_seconds = new Date(key).getTime();
   return Math.floor(epoch_seconds / 1000);

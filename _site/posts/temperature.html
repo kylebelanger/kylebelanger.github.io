@@ -54,16 +54,16 @@
 					<hr>
 
 				      <section class="post-body">
-				      	<p>A beautiful D3.js learning experiment - a simple interactive line graph displaying historical temperature data (30 day range) for any input location. <em>( Sigh... the free API only allows queries of 30 day intervals. )</em> </p>
+				      	<p>A beautiful D3.js learning experiment - a simple interactive line graph displaying historical temperature data (30 day range) for any input location. <em>( Sigh… the free API only allows queries of 30 day intervals. )</em></p>
 
-<p>This first project uses some of D3&#39;s graphing functions, <code>d3.svg.axis()</code>, and <code>d3.svg.line()</code> to draw an SVG-based line graph with interactive tooltip. The historical weather data API response is parsed, formatted, and displayed as a set of <i>x</i> (date) and <i>y</i> (fahrenheit temperature) axis values.</p>
+<p>This first project uses some of D3’s graphing functions, <code>d3.svg.axis()</code>, and <code>d3.svg.line()</code> to draw an SVG-based line graph with interactive tooltip. The historical weather data API response is parsed, formatted, and displayed as a set of <i>x</i> (date) and <i>y</i> (fahrenheit temperature) axis values.</p>
 
-<p><hr class="dash"></p>
+<hr class="dash" />
 
 <table class="width-800px">
   <tr>
     <td>Location:</td>
-    <td><input type="text" id="location" name="location" onkeyup="delayUpdate()" onchange="updateData()" placeholder="Baltimore, MD" required autofocus></td>     
+    <td><input type="text" id="location" name="location" onkeyup="delayUpdate()" onchange="updateData()" placeholder="Baltimore, MD" required="" autofocus="" /></td>     
   </tr>
   <tr>
     <td>Date:</td>      
@@ -75,9 +75,9 @@
 
 <div id="graph"></div>
 
-<p><hr class="dash margin-bottom-30px"></p>
+<hr class="dash margin-bottom-30px" />
 
-<p>The somewhat easy part was parsing the data response, and creating an array of objects. Once we have an array of data objects, it&#39;s just a matter of mapping the data to the graph.</p>
+<p>The somewhat easy part was parsing the data response, and creating an array of objects. Once we have an array of data objects, it’s just a matter of mapping the data to the graph.</p>
 
 <pre class="code-block">
 <code>// data variables
@@ -98,7 +98,7 @@ d3.json(address, function(error, data) {
 </code>
 </pre>
 
-<p>The graph is updated asynchronously with a two-second timeout as the input value changes. This is accomplished by adding an <code>onKeyUp()</code> event listener to the form input, and setting a timeout delay to avoid requesting data with each keystroke. </p>
+<p>The graph is updated asynchronously with a two-second timeout as the input value changes. This is accomplished by adding an <code>onKeyUp()</code> event listener to the form input, and setting a timeout delay to avoid requesting data with each keystroke.</p>
 
 <pre class="code-block">
 <code>// Get location input from page
@@ -113,14 +113,14 @@ function delayUpdate() {
     
     timer = setTimeout(function() {
                 // if more than 3 charecters entered
-                if (input_location.value.length > 2) {
+                if (input_location.value.length &gt; 2) {
                     updateData();
                 }
             }, 500); // .5 second delay
 }</code>
 </pre>
 
-<p><hr class="dash"></p>
+<hr class="dash" />
 
 <table class="width-400px">
   <tr>
@@ -134,13 +134,11 @@ function delayUpdate() {
 </table>
 
 <!-- scripts for this page -->
-
 <script type="text/javascript" src="/js/posts/temperature/temperature.js"></script>
 
 <!-- / scripts -->
 
 <!-- initialize -->
-
 <script>
     // append CSS for this page to the <head>
     var linkElement = document.createElement("link");
