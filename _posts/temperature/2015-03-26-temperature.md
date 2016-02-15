@@ -82,7 +82,7 @@ function delayUpdate() {
 <table class="width-400px">
   <tr>
     <td>The full code is available on:</td>
-    <td><a href="https://github.com/kylesb/static/blob/master/JS/temperature-graph/index.html">GitHub</a></td>     
+    <td><a href="https://github.com/kylesb/static/tree/master/JavaScript/temperature-graph">GitHub</a></td>     
   </tr>
   <tr>
     <td>Date source:</td>      
