@@ -1,16 +1,17 @@
 ---
 layout: post
 
-description: "A D3.js learning <a href='/posts/temperature'>experiment</a> - a simple line graph with tooltip, displaying (30 day range) historical temperature data for any input location."
+description: "A D3.js learning experiment - a simple line graph with tooltip, displaying (30 day range) historical temperature data for any input location."
 
-title:  "Temperature Data Visualization with D3.js"
+title:  "<i><a href='/posts/temperature'>Temperature data visualization</a></i>"
+article: "Temperature data visualization w/ D3.js"
 date:   2015-04-03
 
 link:       null
 readmore:   null
 ---
 
-A beautiful D3.js learning experiment - a simple interactive line graph displaying historical temperature data (30 day range) for any input location. *( Sigh... the free API only allows queries of 30 day intervals. )* 
+A beautiful D3.js learning experiment - a simple interactive line graph displaying historical temperature data (30 day range) for any input location. *( Sigh... the free API only allows queries of 30 day intervals. )*
 
 This first project uses some of D3's graphing functions, <code>d3.svg.axis()</code>, and <code>d3.svg.line()</code> to draw an SVG-based line graph with interactive tooltip. The historical weather data API response is parsed, formatted, and displayed as a set of <i>x</i> (date) and <i>y</i> (fahrenheit temperature) axis values.
 
@@ -54,7 +55,7 @@ d3.json(address, function(error, data) {
 </code>
 </pre>
 
-The graph is updated asynchronously with a two-second timeout as the input value changes. This is accomplished by adding an <code>onKeyUp()</code> event listener to the form input, and setting a timeout delay to avoid requesting data with each keystroke. 
+The graph is updated asynchronously with a two-second timeout as the input value changes. This is accomplished by adding an <code>onKeyUp()</code> event listener to the form input, and setting a timeout delay to avoid requesting data with each keystroke.
 
 <pre class="code-block">
 <code>// Get location input from page
@@ -66,7 +67,7 @@ input_location.addEventListener('keyup', delayUpdate, false);
 function delayUpdate() {
 
     clearTimeout(timer);
-    
+
     timer = setTimeout(function() {
                 // if more than 3 charecters entered
                 if (input_location.value.length > 2) {
