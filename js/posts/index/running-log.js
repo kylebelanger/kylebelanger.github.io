@@ -52,7 +52,7 @@ function convertRunningLog() {
 
       legendColors: {
           min: "#ecf5e2",
-          max: "#305920"
+          max: "#A2AE9E"
       },
       itemName: "mile"
     });
