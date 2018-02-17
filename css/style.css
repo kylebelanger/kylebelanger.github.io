@@ -6,3 +6,9 @@ body {
 .grey {
     color: grey;
 }
+
+.section {
+    border-left: thin solid #dcdcdc;
+    padding-left: 10px;
+    margin: 25px 0;
+}
