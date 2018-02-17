@@ -1,3 +1,2 @@
-GitHub Pages
+Last updated: 16-Feb-2018
 
-Skeleton based on the (Jekyll)[http://jekyllrb.com/docs/usage/] library.
