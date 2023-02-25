@@ -2,6 +2,31 @@
     font-style: italic;
 }
 
-.section {
-    max-width: 550px;
+#header {
+    min-height: 125px;
+}
+
+#header-image {
+    float: left;
+    width: 60px;
+    height: auto;
+    border: thin dotted;
+    margin: 5px 15px 5px 0;
+}
+
+#header-title {
+    margin: 25px 0 15px 0;
+    padding: 5px 0 0 0;
+}
+
+#header-text {
+    margin: -5px 0 25px 0;
+}
+
+.li-img {
+    float: left;
+    width: 70px;
+    height: auto;
+    border: thin dotted;
+    margin: 0 15px 0 0;
 }
