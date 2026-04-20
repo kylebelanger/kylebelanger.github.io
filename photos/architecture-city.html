@@ -67,8 +67,15 @@
       aspect-ratio: 1;
       overflow: hidden;
       cursor: pointer;
-      background: linear-gradient(135deg, #ece8e3 0%, #d4cfc9 100%);
     }
+
+    /* Cycling urban-palette placeholders */
+    .grid-item:nth-child(6n+1) { background: linear-gradient(135deg, #b0b8c8 0%, #788898 100%); } /* slate stone */
+    .grid-item:nth-child(6n+2) { background: linear-gradient(135deg, #d4c4a4 0%, #a08c6c 100%); } /* warm sandstone */
+    .grid-item:nth-child(6n+3) { background: linear-gradient(135deg, #c89080 0%, #986050 100%); } /* brick terracotta */
+    .grid-item:nth-child(6n+4) { background: linear-gradient(135deg, #8898bc 0%, #586888 100%); } /* twilight steel */
+    .grid-item:nth-child(6n+5) { background: linear-gradient(135deg, #a8a474 0%, #787044 100%); } /* aged bronze */
+    .grid-item:nth-child(6n+6) { background: linear-gradient(135deg, #bcccd8 0%, #8898b0 100%); } /* overcast sky */
 
     .grid-item img {
       width: 100%;
