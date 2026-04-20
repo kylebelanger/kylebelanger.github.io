@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Architecture and City — Kyle Belanger</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fff;
+      color: #222;
+      font-size: 13px;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px 16px 40px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: #666;
+      text-decoration: none;
+      font-size: 12px;
+    }
+    .back-link:hover { color: #333; }
+
+    .meta { border-top: 1px solid #ccc; }
+
+    .meta-row {
+      display: flex;
+      gap: 10px;
+      padding: 5px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .meta-label {
+      color: #888;
+      min-width: 72px;
+      flex-shrink: 0;
+    }
+
+    .meta-value { color: #222; }
+
+    .meta-value.tags span { color: #4a6fa5; }
+    .meta-value.tags span::after { content: '; '; color: #222; }
+    .meta-value.tags span:last-child::after { content: ''; }
+
+    .attachments-label {
+      margin-top: 16px;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 3px;
+    }
+
+    .grid-item {
+      aspect-ratio: 1;
+      overflow: hidden;
+      cursor: pointer;
+      background: linear-gradient(135deg, #ece8e3 0%, #d4cfc9 100%);
+    }
+
+    .grid-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      opacity: 0;
+      pointer-events: none;
+      will-change: opacity;
+      transform: translateZ(0);
+    }
+
+    .grid-item img.loaded {
+      opacity: 1;
+      transition: opacity 0.25s ease;
+    }
+
+    .grid-item:hover img.loaded { opacity: 0.88; }
+
+    #lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.93);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #lightbox.open { display: flex; }
+
+    #lb-img {
+      max-width: 92vw;
+      max-height: 92vh;
+      object-fit: contain;
+      display: block;
+      user-select: none;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    #lb-img.loaded { opacity: 1; }
+
+    #lb-spinner {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      border: 3px solid #444;
+      border-top-color: #aaa;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      display: none;
+    }
+
+    #lightbox.loading #lb-spinner { display: block; }
+    #lightbox.loading #lb-img { opacity: 0; }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    #lb-close {
+      position: fixed;
+      top: 16px;
+      right: 22px;
+      font-size: 26px;
+      color: #999;
+      cursor: pointer;
+      line-height: 1;
+      background: none;
+      border: none;
+      z-index: 1001;
+    }
+    #lb-close:hover { color: #fff; }
+
+    #lb-prev, #lb-next {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 32px;
+      color: #777;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 12px 18px;
+      z-index: 1001;
+      user-select: none;
+    }
+    #lb-prev { left: 6px; }
+    #lb-next { right: 6px; }
+    #lb-prev:hover, #lb-next:hover { color: #fff; }
+
+    #lb-counter {
+      position: fixed;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 12px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+  <a class="back-link" href="../index.htm">← Kyle Belanger</a>
+
+  <div class="meta">
+    <div class="meta-row"><span class="meta-label">Title:</span><span class="meta-value">Photography - Architecture and City</span></div>
+    <div class="meta-row"><span class="meta-label">Author:</span><span class="meta-value">Kyle Belanger</span></div>
+    <div class="meta-row"><span class="meta-label">Tags:</span><span class="meta-value tags"><span>photography</span><span>architecture</span><span>city</span><span>travels</span></span></div>
+    <div class="meta-row"><span class="meta-label">Body:</span><span class="meta-value">Photos from Chicago, Edinburgh, Montreal, New England, Quebec</span></div>
+  </div>
+
+  <p class="attachments-label">Attachments:</p>
+
+  <div class="grid" id="grid">
+    <div class="grid-item"><img data-src="https://i.ibb.co/ycPLXQ32/IMG-0409-1739405836322.jpg" alt=""></div>
+    <div class="grid-item"><img data-src="https://i.ibb.co/zV9LhR9S/IMG-1548-1739405837511.jpg" alt=""></div>
+    <div class="grid-item"><img data-src="https://i.ibb.co/k22TbYRP/IMG-2497-1739405838715.jpg" alt=""></div>
+    <div class="grid-item"><img data-src="https://i.ibb.co/ymRFj9B7/IMG-2548-1739405838886.jpg" alt=""></div>
+    <div class="grid-item"><img data-src="https://i.ibb.co/NgJbNjDv/IMG-4240-1739405840762.jpg" alt=""></div>
+    <div class="grid-item"><img data-src="https://i.ibb.co/MyDLzFdh/IMG-4542-4762-1739405840945.jpg" alt=""></div>
+    <div class="grid-item"><img data-src="https://i.ibb.co/k68P0qXx/IMG-5095-1739405845159.jpg" alt=""></div>
+    <div class="grid-item"><img data-src="https://i.ibb.co/PZhrs7P1/IMG-4614-1284-1739405842762.jpg" alt=""></div>
+    <div class="grid-item"><img data-src="https://i.ibb.co/1GdxLVVM/IMG-4620-3394-1739405843052.jpg" alt=""></div>
+    <div class="grid-item"><img data-src="https://i.ibb.co/fYvYNsBT/IMG-6101-1739405846025.jpg" alt=""></div>
+    <div class="grid-item"><img data-src="https://i.ibb.co/3yZrZMHD/IMG-6135-1739405849421.jpg" alt=""></div>
+    <div class="grid-item"><img data-src="https://i.ibb.co/gFL3YsCx/IMG-6716-1739405851542.jpg" alt=""></div>
+    <div class="grid-item"><img data-src="https://i.ibb.co/Y4NgkxYH/IMG-6767-1739405853282.jpg" alt=""></div>
+    <div class="grid-item"><img data-src="https://i.ibb.co/sp9kfq1M/IMG-6846-1-1739405853452.jpg" alt=""></div>
+    <div class="grid-item"><img data-src="https://i.ibb.co/YTcJWk6t/phia.png" alt=""></div>
+    <div class="grid-item"><img data-src="https://i.ibb.co/gbNWV192/IMG-4245.jpg" alt=""></div>
+    <div class="grid-item"><img data-src="https://i.ibb.co/W419FqVT/IMG-6107.jpg" alt=""></div>
+    <div class="grid-item"><img data-src="https://i.ibb.co/67gzqZ5t/IMG-6867.jpg" alt=""></div>
+  </div>
+</div>
+
+<div id="lightbox">
+  <div id="lb-spinner"></div>
+  <button id="lb-close">&#x2715;</button>
+  <button id="lb-prev">&#8249;</button>
+  <img id="lb-img" src="" alt="">
+  <button id="lb-next">&#8250;</button>
+  <div id="lb-counter"></div>
+</div>
+
+<script>
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return
+      const img = entry.target
+      img.src = img.dataset.src
+      img.addEventListener('load', () => img.classList.add('loaded'), { once: true })
+      img.addEventListener('error', () => img.classList.add('loaded'), { once: true })
+      obs.unobserve(img)
+    })
+  }, { rootMargin: '300px' })
+
+  const items = Array.from(document.querySelectorAll('.grid-item img'))
+  items.forEach(img => observer.observe(img))
+
+  const lb = document.getElementById('lightbox')
+  const lbImg = document.getElementById('lb-img')
+  const lbCounter = document.getElementById('lb-counter')
+  let current = 0
+
+  function openLb(i) {
+    current = i
+    const url = items[i].dataset.src
+    lbImg.classList.remove('loaded')
+    lb.classList.add('open', 'loading')
+    document.body.style.overflow = 'hidden'
+    lbCounter.textContent = (i + 1) + ' / ' + items.length
+    const tmp = new Image()
+    tmp.onload = () => { lbImg.src = url; lbImg.classList.add('loaded'); lb.classList.remove('loading') }
+    tmp.onerror = () => lb.classList.remove('loading')
+    tmp.src = url
+  }
+
+  function closeLb() { lb.classList.remove('open', 'loading'); document.body.style.overflow = '' }
+  function prevLb() { openLb((current - 1 + items.length) % items.length) }
+  function nextLb() { openLb((current + 1) % items.length) }
+
+  items.forEach((img, i) => img.parentElement.addEventListener('click', () => openLb(i)))
+  document.getElementById('lb-close').addEventListener('click', closeLb)
+  document.getElementById('lb-prev').addEventListener('click', prevLb)
+  document.getElementById('lb-next').addEventListener('click', nextLb)
+  lb.addEventListener('click', e => { if (e.target === lb) closeLb() })
+  document.addEventListener('keydown', e => {
+    if (!lb.classList.contains('open')) return
+    if (e.key === 'Escape') closeLb()
+    if (e.key === 'ArrowLeft') prevLb()
+    if (e.key === 'ArrowRight') nextLb()
+  })
+</script>
+
+</body>
+</html>
