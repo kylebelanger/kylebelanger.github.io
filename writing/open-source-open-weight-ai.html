@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="Kyle Belanger" name="author">
+  <meta name="description" content="Somewhere in the last few years, AI went from curiosity to coworker. The question that is rarely asked in meetings is: who actually owns the tools that make that possible?">
+  <title>Open-source software as an archetype for open-weight AI models — Kyle Belanger</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    h3 { font-size: 1.17rem; margin: 20px 0 0; }
+
+    .back-link {
+      display: inline-block;
+      color: black;
+      font-weight: normal;
+      text-decoration: none;
+    }
+    .back-link:hover { color: #333; }
+
+    .essay-header { padding: 5px 0 5px; }
+
+    h1 {
+      font-size: 1.5em;
+      line-height: 1.3;
+      margin: 15px 0 10px;
+    }
+
+    .italic { font-style: italic; }
+
+    .date { margin: 0 0 15px; }
+
+    blockquote {
+      max-width: 540px;
+      margin: 0 0 15px;
+      padding: 2px 0 2px 16px;
+      border-left: 2px solid #888;
+      color: #888;
+    }
+    blockquote p { margin: 0; }
+
+    .essay-header p { margin: 0 0 12px; }
+
+    @media (min-width: 601px) {
+      .nowrap { white-space: nowrap; }
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid #888;
+      margin: 10px 0 20px;
+    }
+
+    article p {
+      margin: 0 0 1.1em;
+    }
+
+    article { padding-bottom: 40px; }
+
+    @media (max-width: 600px) {
+      .container { padding: 0 16px; }
+      h1 { font-size: 1.3em; }
+      body { font-size: 17px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h3><a class="back-link" href="../index.htm">← Kyle Belanger</a></h3>
+
+    <header class="essay-header">
+      <h1>Essay - Open-source software as an archetype for open-weight AI models</h1>
+      <p class="italic date">Nov. 17, 2026</p>
+
+      <blockquote>
+        <p>Somewhere in the last few years, AI went from curiosity to coworker. The question that is rarely asked in meetings is: who actually owns the tools that make that possible?</p>
+      </blockquote>
+
+      <p class="italic">This essay was <a href="https://georgetownvoice.com/2026/11/17/open-source-software-as-an-archetype-for-open-weight-ai-models/">published in the Georgetown Voice</a> on Nov. 17, 2026.</p>
+      <p class="italic">About the author: Kyle Belanger is a principal software engineer at a technology company in Washington D.C. and graduate student at <span class="nowrap">Georgetown University McDonough School of Business.</span></p>
+    </header>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <article>
+      <p>Somewhere in the last few years, AI went from curiosity to <em>coworker</em>. The question that is rarely asked in meetings is: who actually owns the tools that make that possible? Many of us have worked with AI models in some capacity, whether for business, academics, or personal exploration. While most of the public debate centers on balancing productivity and ethics—optimists see a step change in what one person can accomplish, while pessimists worry the gains will come at the expense of human capital—a quieter but equally consequential debate is about access. Should the most capable models stay behind company walls, or should narrow-type AI model weights, the learned settings that make a model work, be released for the public to download, run, and modify?</p>
+
+      <p>I have worked in the technology and software industry for over a decade, and the current anxiety about open-weight models looks familiar to what we experienced with open-source software during its initial proliferation. Just about every software developer can relate to spending a weekend writing something a free library already did better. Developers building an application today can pull in free, community-maintained code for encryption, databases, or artifacts in minutes, instead of writing and testing each piece from scratch. An open-weight model is analogous to software released as a compiled program: anyone can run it, tune it, and build on it, but the data and code that produced it stay private. Reflecting on the past implementations of open-source software offers a useful archetype for what may come next for open-weight AI models.</p>
+
+      <p>Many associate open-source projects with the social networking community, GitHub. However, open-source software predates GitHub by nearly two decades. One of the original open operating systems, <a href="https://www.linux.com/what-is-linux/">Linux</a>, was released in 1991, followed by the Apache web server in 1995, and the term “open-source” was coined in 1998. Open source was not a fringe idea; by the early 2000s, it was quietly running much of the internet.</p>
+
+      <p>Even so, many business and technology executives at the time still viewed open source as a threat, believing that if a free alternative to a company’s core product suddenly became available, that company would experience a coinciding loss in revenue and erosion in market share. In June 2001, Microsoft CEO Steve Ballmer <a href="https://www.theregister.com/2001/06/02/ballmer_linux_is_a_cancer/">told the Chicago Sun-Times</a> that Linux was “a cancer,” one that attached itself, in an intellectual property sense, to everything it touched. His real target was the General Public License (GPL), which governs many open-source software projects. The license allows anyone to use and change the source code of projects for free, on one condition: if you share software built on the GPL license, you must pass it along under the same terms. Ballmer argued this would force companies to give away their own products, a claim critics called an overstatement, but the fear shaped how a generation of executives saw open source.</p>
+
+      <p>The launch of GitHub in 2008 helped to transform the open-source community from a hobbyist movement into infrastructure. By pairing Git version control, the iteration framework used extensively in software development, with a layer of social profiles and co-authored projects, GitHub made code contributions visible and portable. Programming accessibility increased: anyone could read production code, make local copies of a project, or propose improvements through a Git feature known as pull requests, rather than waiting for access behind company walls. As the <a href="https://dl.acm.org/doi/10.1145/2666539.2666571">network effect</a> pulled more people in, a co-authored or contributed project became part of a résumé, giving hobbyists and professionals alike a form of <a href="https://web.stanford.edu/~eckert/PDF/Bourdieu1986.pdf#page=8">social capital</a>, the reputation and trust that come from contributing to shared work.</p>
+
+      <p>Nearly 17 years after Ballmer’s comments, Microsoft <a href="https://www.sec.gov/Archives/edgar/data/0000789019/000119312518182975/d600091dex991.htm">acquired GitHub for $7.5 billion</a>, in one of the clearest signs that the initial corporate hostility toward open source had ended. Open source did not destroy commercial software; it became its foundation. A <a href="https://papers.ssrn.com/abstract=4693148">Harvard Business School study</a> estimated that recreating widely used open-source software <em>once</em> would cost about $4.15 billion, but firms would spend roughly $8.8 trillion to rebuild it themselves. In short, without open source, firms would need to spend about 3.5 times more on software than they do today. Now, my coworkers and I come across open-source components in nearly every codebase we work with, both public and private, meaning that companies stopped competing to develop <a href="https://the-decoder.com/study-open-source-and-nearly-3000-developers-are-the-digital-foundation-of-the-global-economy/">the same shared infrastructure</a>. Instead, they compete on what they build on top of it: cloud services, support, integration, and user experience. That is a better contest, as companies no longer have to rebuild the same operating system or database; that effort goes into what customers actually notice and pay for, and the shared layer gets maintained once, in public, instead of duplicated thousands of times.</p>
+
+      <p>Open-weight AI models are following a similar arc. When the Chinese lab DeepSeek released an AI model called R1 in January 2025, it published the weights under the permissive MIT license, allowing anyone to download, run, and modify them. R1 was reportedly built at a fraction of the usual cost that it takes to develop a frontier model, meaning one of the most advanced models from the best-funded labs. A week later, Nvidia had a rough Monday, as its stock fell nearly 17% in a <a href="https://www.wsj.com/livecoverage/stock-market-today-dow-sp500-nasdaq-live-01-27-2025">single day</a>. The sell-off had a logic: Nvidia designs and sells the microprocessor chips that train and run AI models, and investors had assumed that frontier models <a href="https://gigazine.net/gsc_news/en/20250128-deepseek-tech-stock-sell-app-store">would keep demanding more of them</a>. My friends and I quipped that we were living through an investment cycle similar to the railroad boom of the 19th century, and one <a href="https://www.brookings.edu/articles/financing-the-ai-buildout/">Brookings paper</a> suggests the joke isn’t far off on scale: it projects AI investment averaging about 3.6% of U.S. GDP a year through 2032, versus roughly 2.2% for the railroad boom of 1870 to 1890. The market’s reaction was also reminiscent of the early 2000s: a free alternative appeared, and the market assumed incumbents would lose.</p>
+
+      <p>For those of us who work with sensitive data, the value of open-weight models that run on local hardware is also clearly evident. I have worked with companies that exclusively use open-weight models because the documents, code, and data they handle are too sensitive to leave their internal network. Many academic researchers also opt to use open-weight models when working with sensitive data in studies. At Georgetown, psychologist Adam Green’s team recently <a href="https://www.georgetown.edu/news/ai-human-creativity-research/">studied how AI affects creativity in college admissions essays</a>, comparing more than 370,000 written before and after ChatGPT’s release. The team’s analysis used local open-weight models to protect sensitive data. When a model’s weights sit on hardware the company controls, every prompt and every file stays inside its walls, and the company, not a vendor, decides how that data is processed and accessed. It is the same bargain open-source libraries offered developers: instead of renting a capability and trusting someone else with it, you own the tool and control how it is used. For these companies, a local open-weight model isn’t the cheaper option; it is the only version of AI they can safely use. The trade-off is that local models are often smaller than the largest hosted ones and take real expertise to run, but for work that can’t leave the building, that is a price worth paying.</p>
+
+      <p>Similar community trends, such as shared social capital and infrastructure, are emerging that are reminiscent of the foundations of the open-source movement. Despite concerns about potential misuse of AI models, infrastructure for open-weight models continues to proliferate. Perhaps you have heard about the recent <a href="https://www.nytimes.com/2026/09/03/technology/openai-hugging-face-hacking.html">cyberattack</a> on the technology company Hugging Face, which provides infrastructure and a community for housing open-weight models. Its growth has been rapid, as the platform passed one million <a href="https://huggingface.co/blog/huggingface/state-of-os-hf-spring-2026">public models</a> in September 2024, and <a href="https://huggingface.co/blog/ivanfioravanti/three-million-models-and-counting">three million</a> in August 2026. Six of the ten fastest-growing open-source projects on GitHub in 2025, measured by contributors, were <a href="https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/">AI infrastructure projects</a>. Perhaps the largest proprietary AI companies are <a href="https://fortune.com/2025/02/01/sam-altman-openai-open-source-strategy-after-deepseek-shock/">similarly worried</a> that they may be losing market share and value to the open-weight community.</p>
+
+      <p>The parallel between open-source software and open-weight AI models is not perfect, for two reasons. First, open-weight models are not fully open-source, since the training data used to construct them is <a href="https://opensource.org/ai">usually withheld</a>. A developer can fine-tune the weights but cannot inspect or rebuild the model from scratch the way they can recompile source code. Second, capable models carry different misuse risks than open-source web servers, giving policymakers a legitimate reason to treat them differently. Once released, open-weight models cannot be recalled or monitored, and their built-in safeguards can be <a href="https://www.alignmentforum.org/posts/qmQFHCgCyEEjuy5a7/lora-fine-tuning-efficiently-undoes-safety-training-in-llama">stripped for under $200</a>. That matters most for the gravest worries, biological weapons and cyberattacks. International scientific reviewers say AI <a href="https://arxiv.org/abs/2510.13653">could soon assist</a> with the former, though they call the evidence limited and contested. That uncertainty is exactly why policymakers have a legitimate reason to treat them differently.</p>
+
+      <p>Still, the economic lesson holds: when a core technology becomes freely available, value does not disappear; it shifts toward what is built on top. If history is a guide, open-weight models are more likely to become shared infrastructure rather than to collapse the AI business, and the companies that treat them as a liability may eventually find themselves buying into the community they once feared.</p>
+    </article>
+  </div>
+
+</body>
+</html>
